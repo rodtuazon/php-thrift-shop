@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700&family=Montserrat:wght@300;400;500&display=swap');
+
+:root{
+    --lg-font: 'Kaisei Tokumin', serif;
+    --sm-font: 'Montserrat', sans-serif;
+    --pink: #e5345b;
+    --red: #ff0000;
+    --info: #5bc0de;
+    --warning: #f0ad4e;
+
+}
+body{
+    font-family: var(--sm-font);
+    background-color: var(--info);
+}
+a, a:link a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+  
+
+/* button */
+.bg-primary{
+    background-color: var(--warning)!important;
+}
+
+.btn:not(.nav-btns button){
+    background-color: #fff;
+    color: rgb(85, 85, 85);
+    padding: 10px 28px;
+    border-radius: 25px;
+    border: 1px solid rgb(85, 85, 85);
+}
+
+.btn:not(.nav-btns button):hover{
+    background-color: var(--warning);
+    color: #fff;
+    border-color: var(--warning)!important;
+}
+
+.btn-custom:hover{
+    color: #fff!important;
+}
+
+/* navbar */
+.navbar{
+    box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+.navbar-brand h1{
+    font-family: var(--lg-font);
+    font-weight: bold;
+}
+.navbar-brand span{
+    letter-spacing: 2px;
+    font-family: var(--lg-font);
+}
+.nav-link:hover{
+    color: var(--warning)!important;
+}
+.nav-item{
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
+}
+
+/* home */
+#home{
+    background: url(../images/thrift-shop-home.jpg) top/cover no-repeat;
+}
+.carousel-inner h1{
+    font-size: 60px;
+    font-family: var(--lg-font);
+}
+.carousel-item{
+    padding: 4%;
+    background-color: rgb(0,0,0,0.5);  
+}
+.carousel-item .btn{
+    border-color: #fff!important;
+}
+.carousel-item .btn:hover{
+    color: #fff!important;
+    border-color: var(--warning)!important;
+} 
+
+/* title */
+.title h2::before{
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 50px;
+    background-color: var(--warning);
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* collection */
+.active-filter-btn{
+    background-color: var(--warning)!important;
+    color: #fff!important;
+    border-color: var(--warning)!important;
+}
+.filter-button-group .btn:hover{
+    color: #fff!important;
+}
+.collection-img span{
+    top: 20px;
+    right: 20px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+}
+
+
+/* media queries */
+@media(min-width: 992px){
+    .nav-item{
+        border-bottom: none;
+    }
+}
+
+/* login */
+.btn-login:hover{
+    color: #fff!important;
+}
+.copyright{
+    text-align: center;
+}
+.h-custom{
+    height: calc(100% - 73px);
+}
+
+/* register */
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #f093fb;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to bottom right, rgb(91, 192, 222), rgb(128, 212, 243));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to bottom right, rgb(91, 192, 222), rgb(128, 212, 243))
+}   
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+}
+.card-registration .select-arrow {
+    top: 13px;
+}
+
+/* shop products */
+
+.products .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+}
